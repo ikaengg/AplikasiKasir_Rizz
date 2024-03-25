@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="07921d4a-7141-4772-810b-8902b424cff0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from pelanggan]]>
+	</queryString>
+	<field name="PelangganID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NamaPelanggan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NomorTelepon" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="35" uuid="a107189b-4f13-4dc7-8fc5-127e61fdc89d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Pelanggan]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="101" height="30" uuid="2f456999-aa42-4bea-8073-6524933cf0b0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="10" width="77" height="20" uuid="f34b7887-143c-4d25-9093-91697af1f67c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id Pelanggan]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="101" y="0" width="146" height="30" uuid="ae944ec6-d5f9-4137-b0a6-c5645b5e89b4"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="124" y="10" width="101" height="20" uuid="abd4ff9b-0c0c-47df-a4ed-4d26d29d3227"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Pelanggan]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="247" y="0" width="161" height="30" uuid="2781d63f-b0ec-4d6f-9553-1c8a2f52ef39"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="408" y="0" width="147" height="30" uuid="45114303-7b61-4773-afc0-5cdba398ab7b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="305" y="10" width="45" height="20" uuid="c2041411-acad-40b5-b00a-2df03bc4e12e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="10" width="90" height="20" uuid="b5a9f723-0c39-4d6b-a4b6-4167314225dd"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nomor Telepon]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="101" height="30" uuid="1181a25c-d177-4dcb-8124-3acdb2cecc6f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="101" y="0" width="146" height="30" uuid="26d82fbe-19f1-481f-adfa-a3afb31ae634"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="247" y="0" width="161" height="30" uuid="7e876513-c855-4d9f-9512-a075aa7749e4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="408" y="0" width="147" height="30" uuid="b88bf757-1846-4b2e-9226-da84d215c44e"/>
+			</rectangle>
+			<textField>
+				<reportElement x="13" y="10" width="82" height="20" uuid="b693ff61-a541-4ce4-8496-f14ed4f0712c"/>
+				<textFieldExpression><![CDATA[$F{PelangganID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="124" y="10" width="100" height="20" uuid="fdfa3e3c-dff7-4a00-8ca7-6f156f86d9d6"/>
+				<textFieldExpression><![CDATA[$F{NamaPelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="10" width="58" height="20" uuid="347b672c-5880-4e60-88cd-6e65fd9d38d5"/>
+				<textFieldExpression><![CDATA[$F{Alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="439" y="10" width="89" height="20" uuid="bf8681eb-5011-4818-b487-b832e1a0a5b7"/>
+				<textFieldExpression><![CDATA[$F{NomorTelepon}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
