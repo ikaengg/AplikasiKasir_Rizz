@@ -16,7 +16,7 @@ public class Koneksi {
     public static Connection koneksidb(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
-              Connection koneksi=DriverManager.getConnection("jdbc:mysql://localhost:3306/kasir_rizlang","root","");
+              Connection koneksi=DriverManager.getConnection("jdbc:mysql://localhost:3306/kasir_langxriz","root","");
               return koneksi;
         }catch(Exception e) {
            JOptionPane.showMessageDialog(null, "Tidak Terkoneksi ke Database");
